@@ -1,0 +1,114 @@
+:root {
+  color-scheme: dark;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  line-height: 1.4;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body { background: #05060c; color: #f4f1ea; }
+button, input { font: inherit; }
+a { color: inherit; }
+
+.eyebrow {
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #f2c14e;
+  margin: 0 0 8px;
+}
+
+h1, h2 {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+
+h1 { font-size: clamp(36px, 7vw, 64px); }
+.lede, .fineprint, .meta { color: rgba(244, 241, 234, 0.82); }
+.report { position: relative; z-index: 1; padding: 36px 28px 64px; max-width: 1100px; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.stats article {
+  background: rgba(10, 16, 24, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 14px;
+}
+
+.stats span { display: block; font-size: 12px; opacity: 0.75; }
+.stats b { font-size: 22px; font-family: var(--font-display), Georgia, serif; word-break: break-word; }
+
+.error {
+  color: #ffb4b4;
+  background: rgba(120, 24, 24, 0.35);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.ghost {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.16);
+  border: 0;
+  color: inherit;
+  border-radius: 999px;
+  padding: 8px 14px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.fineprint { font-size: 12px; margin-top: 24px; }
+
+.starfield-wrap {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 20px;
+  align-items: stretch;
+}
+
+.starfield {
+  position: relative;
+  min-height: 420px;
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(80, 100, 180, 0.25), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(40, 20, 80, 0.4), transparent 45%),
+    #070814;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.star {
+  position: absolute;
+  border: 0;
+  border-radius: 50%;
+  background: #fff6c8;
+  box-shadow: 0 0 10px rgba(255, 240, 180, 0.7);
+  cursor: pointer;
+  padding: 0;
+}
+
+.star.fresh { animation: twinkle 2.4s ease-in-out infinite; }
+.star.picked { outline: 2px solid #f2c14e; outline-offset: 3px; }
+
+.star-card {
+  background: rgba(10, 16, 24, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+
+@media (max-width: 800px) {
+  .stats, .starfield-wrap { grid-template-columns: 1fr; }
+}
