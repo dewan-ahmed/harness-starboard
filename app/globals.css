@@ -1,6 +1,6 @@
 :root {
   color-scheme: dark;
-  font-family: var(--font-sans), system-ui, sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif;
   line-height: 1.4;
 }
 
@@ -19,7 +19,7 @@ a { color: inherit; }
 }
 
 h1, h2 {
-  font-family: var(--font-display), Georgia, serif;
+  font-family: ui-serif, Georgia, serif;
   font-weight: 500;
   margin: 0 0 10px;
 }
@@ -43,7 +43,7 @@ h1 { font-size: clamp(36px, 7vw, 64px); }
 }
 
 .stats span { display: block; font-size: 12px; opacity: 0.75; }
-.stats b { font-size: 22px; font-family: var(--font-display), Georgia, serif; word-break: break-word; }
+.stats b { font-size: 22px; font-family: ui-serif, Georgia, serif; word-break: break-word; }
 
 .error {
   color: #ffb4b4;

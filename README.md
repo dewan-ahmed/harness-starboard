@@ -17,4 +17,6 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000), click a star, wander into the source.
+Open [http://127.0.0.1:3000](http://127.0.0.1:3000) in your local browser, click a star, wander into the source.
+
+Use that loopback URL, not a Cursor preview or LAN IP. Those can hit a corporate proxy and return “Accessible only on corporate network.”
